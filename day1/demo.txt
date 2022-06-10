@@ -1,0 +1,77 @@
+1.Different between == & ===
+    -> These are comparison operators.they always return boolean values like true or false
+    -> == it compares only value
+    -> == compares value and type of data as well
+    -> If you want to find out data type of any value you need to use typeof operator
+
+    2.var,let,const
+    -These are three different way of creating or declaring the variables in js
+    Var 
+    - var declaration are globaly scope or function scope .
+    -can be access everywhere i.e globally scoped variable
+    Let
+    - let declaration are block scope.
+    const
+    - const declaration are block scope.
+   
+    At the time of allocation of memory, they will get their memory also at different locations
+    means var will be in global land let and const will get memory in temporal dead zone.
+
+    3.spred operator
+    - Basically they are used to destructor the array and object elements
+    
+    let obj=1={id:1,name:john}
+    let obj2={ country :India , …obj1}
+    Console.log(obj2)
+
+
+    4.what is execution context
+    - execution context is a concept inside js inigine. when we run any js code then 
+    that file will be executed depends on execution context.
+    -it as two types:-
+    the monment you run the file ,global execution context GCE will be created. 
+    inside this we are having two phases.
+
+    1)creation phase:-
+    this is initial phase of global execution content.Here all variables and function are given memory allocated .
+    and value assin as undefined. the global execution context is pushed into the call stack 
+    and it remains there until
+    all the cade gets executed. After complete execution
+    global execution context get popped from callstack.
+
+    2)execution phase:-
+    when function get executed a seperate execution context get executed
+    ie function execution which is pushed code into the stack ie. at the
+    top of the global execution context. here the code inside the function gets executed. After the execution
+    of the function
+    execution context gets popped out of te callstack and te rest of te code gets executed.
+
+    5.what is mean by first class function
+    -function wich ets pass as an arument to a function.
+    function wich can be returnned from a function.
+    function which can be assign to a variable as a value.
+    are known as first class function.
+
+    6.what is mean closur
+    -is a combination of function bundled together with reference to its surrounding state(lexical environtment)
+    ie. you can access outer functions scope from an inner function.
+
+    7.what is call() apply() and bind() method.
+    -Call invokes the function and allows you to pass in arguments one by one.
+    Apply invokes the function and allows you to pass in arguments as an array.
+    Bind returns a new function, allowing you to pass in a this array and any number of arguments
+
+    8.prototypes
+    The Prototype is an object that is associated with every functions and objects by default in js,
+     where functions prototypes property is accesible and modifiable and objects prototype property is not visible.
+
+    9.promise
+    Promises are used to handle asynchronous operations in JavaScript.
+    They are easy to manage when dealing with multiple asynchronous operations
+    where callbacks can create callback hell leading to unmanageable code.
+
+    10.What is the purpose of async/await keywords?
+    -The async keyword turns a method into an async method, which allows you to use the await keyword in its body.
+    When the await keyword is applied, it suspends the calling method and yields
+    control back to its caller until the awaited task is complete.
+    await can only be used inside an async method

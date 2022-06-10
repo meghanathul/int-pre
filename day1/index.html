@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./script.js"></script>
+</head>
+
+<body>
+    WHAT IS JAVASCRIPT
+    -javascript is single threaded synchronous language which means it executed line by line .
+    -i.e code run line by line.
+    -javascript programing erlier use for UI design only.
+    -But now with the help of node.js we can use use javascript for backend also.
+    -single threaded means :
+    if we run any code in browser and any error comes then the code wil stope there.
+    it will not go further for execution.
+---------------------------------------------------------------------------------------
+
+    WHAT IS JAVASCRIPT ENGINE
+    -js engin it used to help your code to execute.
+    -in other language c,c++ we have complier.
+    -when code is come to browser code get converted into machine code to understand browser.
+    - then the code get taken by js engine and get executed.
+    -JE use to give memory to variable.
+    -JE create execution context.
+
+------------------------------------------------------------------------------------------    
+    WHAT IS TEMPORAL DEAD ZONE
+    - Temporal dead zone is a block where variable are ineccesible untile and unless
+    it will get some value.
+    - whenever we write any code it will get converted to machile code.
+    - then it will gose to global execution context(GEC).
+    -where it will allocated memory.
+    -after it will go to code execution .
+    -now the problem is if we want to excess the variable declare with let and const befor
+    initializing .
+    -then we will get error because it get store in script scope so we cant axcess it before
+    initializing.
+    - so for the solution of thise problem js introduce on cancept
+    -that initialization of variable schould move top of the scope .
+    ex-
+    let a=0;
+    console.log(a)
+----------------------------------------------------------------------------------------------    
+    DIFFERENCE BETWEEN VAR LET AND CONST
+    var:
+    -var is a global scope variable.
+    -when we declare any variable using var then it will get memory in global scope.
+    -when we access any variable before initializing and it is declare with var then we get
+    value as undefined.
+    -var variable can be updated and redeclared also.
+    syn-
+    var a=10;
+
+    let:
+    -let is a block scope variable.
+    -when we declare any variable using let then it will get memory in block scope(script scope).
+    -when we access any variable before initializing and it is declare with let then we get
+    reference error.
+    -let variable can be updated but not redeclared .
+    syn-
+    let a=10;
+
+    const:
+    -const is a block scope variable.
+    -when we declare any variable usingconstt then it will get memory in block scope(script scope).
+    -const variable after declaration need to initialize also.
+    -when we access any variable before initializing and it is declare with const then we get
+    reference error.
+    -const variable can't be updated and redeclared .
+    syn-
+    const a=10;
+
+    WHAT IS TYPE OF OPERATOR
+    -typeof operator basically use for check the datatype of any operant.
+    - the operant can be any thing variable , function or object whose type u
+    wont to find.
+-------------------------------------------------------------------------------------------------
+    DIFFERENCE BETWEEN UNDEFINED AND NULL
+    -undefiend means the variable is gate declared but not initilize any value
+    -it meanse the value dose not exist till.
+    -undefine get assign by the memory. it is a datatype
+    -the datatype of undefined is also undefined
+
+    -in js if we wonto declare variable but dont wont to give value at that time or we
+    wont to assign value latter to it then we can initialize null value to that variable it has no value
+    - null meanse the variable have no value
+    - null is an object
+---------------------------------------------------------------------------------------------
+    WHAT IS NAN
+    -NAN is not-A-Number
+    it is not a legal value
+    it is an error
+    isNan() method return true if value is nan.
+
+------------------------------------------------------------------------------------------
+    WHAT IS JAVASCRIPT FUNCTION
+    -it is a set of statement we write in a block
+    -if we won to write certain code again and again that time we write function there to stop repeting of code
+---------------------------------------------------------------------------------------------------------------
+    WHAT IS FUNCTION CURRING IN JAVASCRIPT
+    it is a technique in functional programing transformation of the fun
+    of multiple argument into several fun of single argument in sequence
+ 
+---------------------------------------------------------------------------------------------------------------------
+    WHAT IS FUNCTION EXPRESSIONS :
+    const add=function (){
+
+    } 
+    they will not be hoisted because they are variable now
+    who dont get memory at the time of memory allocation
+    (ARROW FUN AND FIRST CLASS FUNCTION ARE NOT HOISTED)
+---------------------------------------------------------------------------------------
+    FUNCTION DECLERATION :
+    function add (){
+
+    }
+    they will be hoisted becouse they will get memory at the time of memory allocation itself
+---------------------------------------------------------------------------------------
+    WHAT IS PURE FUNCTION 
+    - A puer function is a function which always return same result
+    if the same argument are pass.
+    -it dose not depend on any state.
+
+    (IN REDUX PURE FUNCTION IS TAKE STATE AND ALWAYS RETURN NEW STATE)
+    in javascript pure function is always return a new data it will not modify
+    iot is only depend on input argument 
+    output is only depend on input argument
+    eg:
+    function add(x){
+        return x+5
+    }
+    add(5)
+---------------------------------------------------------------------------------------
+
+    WHAT IS OPERATOR IN JAVASCRIPT
+    operator are a symbole which use to perform some mathematical operation between operant
+    arithmatic operetor +,-,*,/
+    bitwise operator &,|,~,
+    assignment operator =,+=,-=
+    compartor ==,===,!=,>,<,>=,<=
+    logical &&|| !
+    ternary :?
+    
+    1)REST OPERATOR :
+    function add(a,b,...c){
+        console.log(a,b,c,d)
+    }
+    add(1,2,3,4)
+    it is basically structuring all destructured value.
+
+  2)SPREAD OPERATOR :
+  let a=[1,2,3];
+  let b=[4,5,6];
+  let c =combination of a and b [a,b]=[[1,2,3],[4,5,6]]
+        =[...a,...b]
+
+   it help you to destructure the non-primitive datatype(array and object)    
+---------------------------------------------------------------------------------------   
+   WHAT IS CLOUSER IN JAVASCRIPT 
+   closour in js is basically combination of two thing function + lexical environment(nearby invironment)
+---------------------------------------------------------------------------------------  
+
+   WHAT IS FUNCTION CURRING
+   if a function is returning another function then to execute that we will have to create a new variable
+   and then execute or invoke that variable which wood be expensive from the memory perspective
+   function curring lets you execute the returned function with the main function name only and you wont have
+   to create a new  variable for that.
+---------------------------------------------------------------------------------------   
+   WHAT IS PROTOPE
+   instance of an object
+   prototype are machanisn by which javascript object inherite feacture 
+   from one another.
+   every object in javascript has a builtine property which is called prototype
+---------------------------------------------------------------------------------------
+  
+ SPLICE: RETURN REMOVED ITEMS IN ARRAY  -----CHANGE THE ORIGINAL
+ SLICE :RETURN SELECTED ELEMENT IN NEW ARRAY
+
+---------------------------------------------------------------------------------------
+  GENERATOR FUNCTION
+  -A generator function is used when we want to generator/use only some values.
+  -In this way we can save memory.
+
+ - `yield` works as same as `return` keyword but after `return` keyword if 
+ there is any code it is un-reachable but with `yield` any code after
+  this will also work.
+ 
+ - Memory is created for only the which is executed,
+  not every line in the function.
+--------------------------------------------------------------------------------------- 
+ GARBAGE COLLECTION;
+When any data or objects or any sort of values which are not 
+being use or will not be used in future as well that time we 
+need someone who can remove these values from memory or 
+collect this gargbage . This is known as garbage collection.
+---------------------------------------------------------------------------------------
+Map and Set 
+WeakMap and WeakSet
+WEKSET :-
+   -WeakSet in JavaScript is used to store a collection of objects.
+   -It adapts the same properties of that of a set and does not store duplicates.
+   -The major difference of a WeakSet with the set is that a WeakSet 
+   - is a collection of objects and not values of some particular type.
+ 
+ WEKMAP :-
+   -The WeakMap object is a collection of key/value pairs in which the 
+   -keys are weakly referenced. The keys must be objects and the values can 
+    be arbitrary values
+
+{id: 1}
+
+In ES5 version of JS , objects can have the keys only as 
+string data type , Now if you want to create the keys as 
+object so it is not possible 
+{id:1}
+
+In ES6 , we got new data type as Map which was allowing us to 
+create a data type in which key and value both can be objects.
+const data = new Map()
+data.set({id:1},{name:"Hars"})
+
+Ex : removing DOM elements from memory when they are removed
+from DOM
+
+Map v/s WeakMap : map is iterable whereas WeakMap are not.
+---------------------------------------------------------------------------------------
+WHAT IS CALLBACK FUNCTION 
+    a function passed as argument to another function is called as callback function.
+    ex
+    function name(N,info){
+        
+        console.log('Hi my name is ' +N)
+        info()
+    }
+    function data(){
+        console.log('Nice to meet You')
+    }
+    name('Abc',data)
+---------------------------------------------------------------------------------------
+ASYNC AND AWAIT
+function resolveAfter2Seconds() {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve('resolved');
+      }, 2000);
+    });
+  }
+  
+  async function asyncCall() {
+    console.log('calling');
+    const result = await resolveAfter2Seconds();
+    console.log(result);
+    // expected output: "resolved"
+  }
+  
+  asyncCall();
+  
+---------------------------------------------------------------------------------------
+
+// What are the different types of errors in javascript
+// "Load time error  
+// Run time error "
+---------------------------------------------------------------------------------------
+WHAT ARE PROMISES AND WHY DO WE NEED THEM
+-Promises are used to handle asynchronous operations in JavaScript. 
+-They are easy to manage when dealing with multiple asynchronous operations where callbacks can create 
+-callback hell leading to unmanageable code
+Benefits of Promises 
+-Improves Code Readability
+-Better handling of asynchronous operations
+-Better flow of control definition in asynchronous logic
+-Better Error Handling
+ex:
+var promise = new Promise(function(resolve, reject) {
+    const x = "meghana";
+    const y = "meghana"
+    if(x === y) {
+        resolve();
+    } else {
+        reject();
+    }
+    });
+    
+    promise.
+        then(function () {
+            console.log('Success');
+        }).
+        catch(function () {
+            console.log('Some error has occurred');
+        });
+    
+---------------------------------------------------------------------------------------
+DIFFERENCE BETWEEN ES5 AND ES6
+1. ECMAScript 5 (ES5P) : 
+ES5 is also known as ECMAScript 2009 as it is released in 2009.
+ It is a function contractors focus on how the objects are instantiated. 
+ For ES5 you have to write function keyword and return, to be used to define the function,
+  like normal general JavaScript language. 
+
+2. ECMAScript 6 (ES6) : 
+ES6 is also known as ECMAScript 2015 as it is released in 2015.
+ Its class allows the developers to instantiate an object using the new operator,
+  using an arrow function, in case it doesn’t need to use function keyword to define the function,
+   also return keyword can be avoided to fetch the computer value. 
+
+Difference between ES5 and ES6 : 
+ES5                                                              ES6
+  ---------------------------------------|-------------------------------------------------------
+  -It was introduced in 2009.                          -It was introduced in 2015.                                                             |
+  -It supports primitive data types that        
+  are string, number, boolean, null, and undefined.   -In ES6, there are some additions to JavaScript data types. It introduced a new primitive data type ‘symbol’ for supporting unique values.
+  -There are only one way to define the variables     -There are two new ways to define variables that are let and const.
+  by using the var keyword.  
+  -It has a lower performance as compared to ES6.       -It has a higher performance than ES5.
+  -Object manipulation is time-consuming in ES5.	    -Object manipulation is less time-consuming in ES6.
+  -In ES5, both function and return keywords are used   -An arrow function is a new feature introduced in ES6 by which we don’t require the function keyword to define the function.
+   to define a function.
+  -It provides a larger range of community supports    -It provides a less range of community supports than that of ES5than that of ES6
+ ---------------------------------------------------------------------------------------
+
+SETTIMEOUT
+The setTimeout() method executes a block of code after the specified time.
+ The method executes the code only once
+function greet() {
+    console.log('Hello world');
+}
+
+setTimeout(greet, 3000);
+console.log('This message is shown first');
+---------------------------------------------------------------------------------------
+EVENT LOOP
+
+---------------------------------------------------------------------------------------------------------------------
+
+</body>
+
+</html>
